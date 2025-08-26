@@ -98,10 +98,15 @@ The goal is not only to make the turtle move but also to get familiar with the t
    * [Linux Command Line Basics](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
 
 ---
-
 ### Steps
 
-#### 1. Clone the Repository
+#### 1.1. Fork this repository. 
+
+**[DO NOT PULL OR MAKE CHANGES ON THIS REPO]**
+
+#### 1.2. Clone the Repository. 
+
+**[Make sure that you are cloning your own fork and not this repo.]**
 
 ```bash
 git clone <repository-url>
