@@ -14,7 +14,7 @@ As always, best of luck and happy coding!
 1. [How to Submit Your Work](#how-to-submit-your-work)
 2. [Task 1: Getting Started with Turtlesim](#task-1-getting-started-with-turtlesim)
 3. [Task 2: Writing Your First ROS 2 Node](#task-2-writing-your-first-ros-2-node)
-4. [Task 3: (To Be Announced)](#task-3)
+4. [Task 3: Swarm Algorithm with Turtlesim](#task-3-swarm-algorithm-with-turtlesim)
 
 ---
 
@@ -258,7 +258,7 @@ source install/setup.bash
 We’ll use Python for simplicity.
 
 ```bash
-cd src
+cd /src/task2
 ros2 pkg create --build-type ament_python turtle_draw --dependencies rclpy geometry_msgs
 ```
 
@@ -283,7 +283,7 @@ Inside the `turtle_draw` package:
 1. Create a Python node file:
 
    ```bash
-   cd /src/task2_ws/src/turtle_draw/turtle_draw
+   cd /src/task2/turtle_draw/turtle_draw
    touch circle_drawer.py
    chmod +x circle_drawer.py
    ```
@@ -304,6 +304,8 @@ Inside the `turtle_draw` package:
    ```bash
    ros2 run turtle_draw circle_drawer
    ```
+
+	**NOTE: Make sure to check out /src/example-submission for guidance on how to setup entrypoints and structure your code!**
 
 	 NOTE: You will need to run `colcon build` and `source install/setup.bash` again to make sure you are running the latest version of your node.
 
@@ -328,6 +330,8 @@ Modify your code to draw **any other shape** (square, spiral, star, etc.) by cha
   (only include your package, not build/install/logs folders).
 
 * Add screenshots of your turtle drawing shapes in noVNC.
+
+* If you want to submit a video you can upload it to YouTube, and add a link to it as a comment on your pull request.
 
 * Submit via a **Pull Request** as described in [How to Submit Your Work](#how-to-submit-your-work).
 
