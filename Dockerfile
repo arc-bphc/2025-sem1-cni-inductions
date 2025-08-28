@@ -1,4 +1,4 @@
-FROM ros:humble-desktop
+FROM ros:humble
 
 # Install turtlesim, teleop, rviz, gazebo
 RUN apt-get update && apt-get install -y \
