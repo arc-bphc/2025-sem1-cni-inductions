@@ -1,11 +1,11 @@
-FROM ros:humble
+FROM ros:humble-desktop
 
 # Install turtlesim, teleop, rviz, gazebo
 RUN apt-get update && apt-get install -y \
     ros-humble-turtlesim \
     ros-humble-teleop-twist-keyboard \
     ros-humble-rviz2 \
-    ros-humble-gazebo-ros-pkgs \
+    #ros-humble-gazebo-ros \
     && rm -rf /var/lib/apt/lists/*
 
 # Source ROS env automatically
