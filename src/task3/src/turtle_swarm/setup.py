@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'turtle_draw'
+package_name = 'turtle_swarm'
 
 setup(
     name=package_name,
@@ -13,14 +13,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='root',
-    maintainer_email='root@todo.todo',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='your_name',
+    maintainer_email='your_email@example.com',
+    description='Boids swarm algorithm with turtlesim.',
+    license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'line = turtle_draw.line:main'
+            'boids_controller = turtle_swarm.boids_controller:main',
         ],
     },
 )
