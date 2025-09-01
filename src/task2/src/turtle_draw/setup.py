@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'line = turtle_draw.line:main'
+            'circle_drawer = turtle_draw.circle_drawer:main',
+            'star_drawer = turtle_draw.star_drawer:main',
         ],
     },
 )
