@@ -1,0 +1,3 @@
+[console_scripts]
+boids_swarm = turtle_draw.boids_swarm:main
+

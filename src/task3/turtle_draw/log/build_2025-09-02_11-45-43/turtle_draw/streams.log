@@ -1,0 +1,24 @@
+[0.179s] Invoking command in '/src/task3/turtle_draw': PYTHONPATH=/src/task3/turtle_draw/build/turtle_draw/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/task3/turtle_draw/install/turtle_draw/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/turtle_draw build --build-base /src/task3/turtle_draw/build/turtle_draw/build install --record /src/task3/turtle_draw/build/turtle_draw/install.log --single-version-externally-managed install_data
+[0.242s] running egg_info
+[0.242s] writing build/turtle_draw/turtle_draw.egg-info/PKG-INFO
+[0.242s] writing dependency_links to build/turtle_draw/turtle_draw.egg-info/dependency_links.txt
+[0.243s] writing entry points to build/turtle_draw/turtle_draw.egg-info/entry_points.txt
+[0.243s] writing requirements to build/turtle_draw/turtle_draw.egg-info/requires.txt
+[0.243s] writing top-level names to build/turtle_draw/turtle_draw.egg-info/top_level.txt
+[0.245s] reading manifest file 'build/turtle_draw/turtle_draw.egg-info/SOURCES.txt'
+[0.245s] writing manifest file 'build/turtle_draw/turtle_draw.egg-info/SOURCES.txt'
+[0.246s] running build
+[0.246s] running build_py
+[0.246s] copying turtle_draw/boids_swarm.py -> /src/task3/turtle_draw/build/turtle_draw/build/lib/turtle_draw
+[0.247s] running install
+[0.247s] running install_lib
+[0.247s] copying /src/task3/turtle_draw/build/turtle_draw/build/lib/turtle_draw/boids_swarm.py -> /src/task3/turtle_draw/install/turtle_draw/lib/python3.10/site-packages/turtle_draw
+[0.248s] byte-compiling /src/task3/turtle_draw/install/turtle_draw/lib/python3.10/site-packages/turtle_draw/boids_swarm.py to boids_swarm.cpython-310.pyc
+[0.250s] running install_data
+[0.250s] running install_egg_info
+[0.250s] removing '/src/task3/turtle_draw/install/turtle_draw/lib/python3.10/site-packages/turtle_draw-0.0.0-py3.10.egg-info' (and everything under it)
+[0.251s] Copying build/turtle_draw/turtle_draw.egg-info to /src/task3/turtle_draw/install/turtle_draw/lib/python3.10/site-packages/turtle_draw-0.0.0-py3.10.egg-info
+[0.256s] running install_scripts
+[0.263s] Installing boids_swarm script to /src/task3/turtle_draw/install/turtle_draw/lib/turtle_draw
+[0.264s] writing list of installed files to '/src/task3/turtle_draw/build/turtle_draw/install.log'
+[0.274s] Invoked command in '/src/task3/turtle_draw' returned '0': PYTHONPATH=/src/task3/turtle_draw/build/turtle_draw/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/task3/turtle_draw/install/turtle_draw/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/turtle_draw build --build-base /src/task3/turtle_draw/build/turtle_draw/build install --record /src/task3/turtle_draw/build/turtle_draw/install.log --single-version-externally-managed install_data
