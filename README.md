@@ -161,7 +161,7 @@ docker compose exec ros2 /bin/bash
 Then run:
 
 ```bash
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
+ros2 run turtlesim turtle_teleop_key
 ```
 
 You can now move the turtle with your keyboard.
