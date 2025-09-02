@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/turtle_swarm/turtle_swarm.egg-info/PKG-INFO
+../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt
+../../build/turtle_swarm/turtle_swarm.egg-info/dependency_links.txt
+../../build/turtle_swarm/turtle_swarm.egg-info/entry_points.txt
+../../build/turtle_swarm/turtle_swarm.egg-info/requires.txt
+../../build/turtle_swarm/turtle_swarm.egg-info/top_level.txt
+../../build/turtle_swarm/turtle_swarm.egg-info/zip-safe
+resource/turtle_swarm
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+turtle_swarm/__init__.py
+turtle_swarm/swarm.py

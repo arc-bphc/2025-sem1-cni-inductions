@@ -1,0 +1,37 @@
+[1.039s] Invoking command in '/src/task3/turtle_swarm': PYTHONPATH=/src/build/turtle_swarm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_swarm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_swarm build --build-base /src/build/turtle_swarm/build install --record /src/build/turtle_swarm/install.log --single-version-externally-managed install_data
+[1.278s] running egg_info
+[1.278s] creating ../../build/turtle_swarm/turtle_swarm.egg-info
+[1.279s] writing ../../build/turtle_swarm/turtle_swarm.egg-info/PKG-INFO
+[1.279s] writing dependency_links to ../../build/turtle_swarm/turtle_swarm.egg-info/dependency_links.txt
+[1.279s] writing entry points to ../../build/turtle_swarm/turtle_swarm.egg-info/entry_points.txt
+[1.279s] writing requirements to ../../build/turtle_swarm/turtle_swarm.egg-info/requires.txt
+[1.279s] writing top-level names to ../../build/turtle_swarm/turtle_swarm.egg-info/top_level.txt
+[1.279s] writing manifest file '../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt'
+[1.281s] reading manifest file '../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt'
+[1.282s] writing manifest file '../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt'
+[1.282s] running build
+[1.282s] running build_py
+[1.282s] creating /src/build/turtle_swarm/build
+[1.282s] creating /src/build/turtle_swarm/build/lib
+[1.282s] creating /src/build/turtle_swarm/build/lib/turtle_swarm
+[1.282s] copying turtle_swarm/swarm.py -> /src/build/turtle_swarm/build/lib/turtle_swarm
+[1.282s] copying turtle_swarm/__init__.py -> /src/build/turtle_swarm/build/lib/turtle_swarm
+[1.283s] running install
+[1.283s] running install_lib
+[1.284s] creating /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm
+[1.284s] copying /src/build/turtle_swarm/build/lib/turtle_swarm/swarm.py -> /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm
+[1.284s] copying /src/build/turtle_swarm/build/lib/turtle_swarm/__init__.py -> /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm
+[1.285s] byte-compiling /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm/swarm.py to swarm.cpython-310.pyc
+[1.287s] byte-compiling /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm/__init__.py to __init__.cpython-310.pyc
+[1.287s] running install_data
+[1.287s] creating /src/install/turtle_swarm/share/ament_index
+[1.287s] creating /src/install/turtle_swarm/share/ament_index/resource_index
+[1.287s] creating /src/install/turtle_swarm/share/ament_index/resource_index/packages
+[1.288s] copying resource/turtle_swarm -> /src/install/turtle_swarm/share/ament_index/resource_index/packages
+[1.288s] copying package.xml -> /src/install/turtle_swarm/share/turtle_swarm
+[1.288s] running install_egg_info
+[1.290s] Copying ../../build/turtle_swarm/turtle_swarm.egg-info to /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm-0.0.0-py3.10.egg-info
+[1.291s] running install_scripts
+[1.316s] Installing swarm_node script to /src/install/turtle_swarm/lib/turtle_swarm
+[1.317s] writing list of installed files to '/src/build/turtle_swarm/install.log'
+[1.348s] Invoked command in '/src/task3/turtle_swarm' returned '0': PYTHONPATH=/src/build/turtle_swarm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_swarm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_swarm build --build-base /src/build/turtle_swarm/build install --record /src/build/turtle_swarm/install.log --single-version-externally-managed install_data

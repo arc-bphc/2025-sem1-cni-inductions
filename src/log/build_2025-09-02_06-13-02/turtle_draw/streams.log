@@ -1,0 +1,37 @@
+[1.049s] Invoking command in '/src/task2/turtle_draw': PYTHONPATH=/src/build/turtle_draw/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_draw/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_draw build --build-base /src/build/turtle_draw/build install --record /src/build/turtle_draw/install.log --single-version-externally-managed install_data
+[1.296s] running egg_info
+[1.297s] creating ../../build/turtle_draw/turtle_draw.egg-info
+[1.297s] writing ../../build/turtle_draw/turtle_draw.egg-info/PKG-INFO
+[1.298s] writing dependency_links to ../../build/turtle_draw/turtle_draw.egg-info/dependency_links.txt
+[1.298s] writing entry points to ../../build/turtle_draw/turtle_draw.egg-info/entry_points.txt
+[1.298s] writing requirements to ../../build/turtle_draw/turtle_draw.egg-info/requires.txt
+[1.298s] writing top-level names to ../../build/turtle_draw/turtle_draw.egg-info/top_level.txt
+[1.298s] writing manifest file '../../build/turtle_draw/turtle_draw.egg-info/SOURCES.txt'
+[1.300s] reading manifest file '../../build/turtle_draw/turtle_draw.egg-info/SOURCES.txt'
+[1.301s] writing manifest file '../../build/turtle_draw/turtle_draw.egg-info/SOURCES.txt'
+[1.301s] running build
+[1.301s] running build_py
+[1.301s] creating /src/build/turtle_draw/build
+[1.301s] creating /src/build/turtle_draw/build/lib
+[1.301s] creating /src/build/turtle_draw/build/lib/turtle_draw
+[1.302s] copying turtle_draw/circle_drawer.py -> /src/build/turtle_draw/build/lib/turtle_draw
+[1.302s] copying turtle_draw/__init__.py -> /src/build/turtle_draw/build/lib/turtle_draw
+[1.302s] running install
+[1.302s] running install_lib
+[1.303s] creating /src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw
+[1.303s] copying /src/build/turtle_draw/build/lib/turtle_draw/circle_drawer.py -> /src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw
+[1.303s] copying /src/build/turtle_draw/build/lib/turtle_draw/__init__.py -> /src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw
+[1.304s] byte-compiling /src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw/circle_drawer.py to circle_drawer.cpython-310.pyc
+[1.305s] byte-compiling /src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw/__init__.py to __init__.cpython-310.pyc
+[1.305s] running install_data
+[1.305s] creating /src/install/turtle_draw/share/ament_index
+[1.305s] creating /src/install/turtle_draw/share/ament_index/resource_index
+[1.306s] creating /src/install/turtle_draw/share/ament_index/resource_index/packages
+[1.306s] copying resource/turtle_draw -> /src/install/turtle_draw/share/ament_index/resource_index/packages
+[1.306s] copying package.xml -> /src/install/turtle_draw/share/turtle_draw
+[1.306s] running install_egg_info
+[1.308s] Copying ../../build/turtle_draw/turtle_draw.egg-info to /src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw-0.0.0-py3.10.egg-info
+[1.309s] running install_scripts
+[1.335s] Installing circle_drawer script to /src/install/turtle_draw/lib/turtle_draw
+[1.335s] writing list of installed files to '/src/build/turtle_draw/install.log'
+[1.385s] Invoked command in '/src/task2/turtle_draw' returned '0': PYTHONPATH=/src/build/turtle_draw/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_draw/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_draw build --build-base /src/build/turtle_draw/build install --record /src/build/turtle_draw/install.log --single-version-externally-managed install_data
