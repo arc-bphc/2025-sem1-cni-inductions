@@ -15,12 +15,13 @@ setup(
     zip_safe=True,
     maintainer='root',
     maintainer_email='root@todo.todo',
-    description='TODO: Package description',
+    description='Draw a circle with turtlesim',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'line = turtle_draw.line:main'
+            # run with: ros2 run turtle_draw circle_drawer
+            'circle_drawer = turtle_draw.circle_drawer:main',
         ],
     },
 )
