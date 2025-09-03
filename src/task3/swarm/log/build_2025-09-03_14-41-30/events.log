@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000343] (swarm) JobQueued: {'identifier': 'swarm', 'dependencies': OrderedDict()}
+[0.000377] (swarm) JobStarted: {'identifier': 'swarm'}
+[0.099776] (-) TimerEvent: {}
+[0.199991] (-) TimerEvent: {}
+[0.300204] (-) TimerEvent: {}
+[0.400424] (-) TimerEvent: {}
+[0.435291] (swarm) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', 'build/swarm', 'build', '--build-base', '/src/task3/swarm/build/swarm/build', 'install', '--record', '/src/task3/swarm/build/swarm/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/src/task3/swarm', 'env': {'HOSTNAME': '3992087c2bbc', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/src/task3/swarm/swarm', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/src/task3/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': 'novnc:0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/src/task3/install/swarm:/opt/ros/humble', 'PWD': '/src/task3/swarm/build/swarm', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/src/task3/swarm/build/swarm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/task3/swarm/install/swarm/lib/python3.10/site-packages:/src/task3/install/swarm/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.500548] (-) TimerEvent: {}
+[0.597284] (swarm) StdoutLine: {'line': b'running egg_info\n'}
+[0.597753] (swarm) StdoutLine: {'line': b'creating build/swarm/swarm.egg-info\n'}
+[0.597906] (swarm) StdoutLine: {'line': b'writing build/swarm/swarm.egg-info/PKG-INFO\n'}
+[0.598057] (swarm) StdoutLine: {'line': b'writing dependency_links to build/swarm/swarm.egg-info/dependency_links.txt\n'}
+[0.598164] (swarm) StdoutLine: {'line': b'writing entry points to build/swarm/swarm.egg-info/entry_points.txt\n'}
+[0.598240] (swarm) StdoutLine: {'line': b'writing requirements to build/swarm/swarm.egg-info/requires.txt\n'}
+[0.598292] (swarm) StdoutLine: {'line': b'writing top-level names to build/swarm/swarm.egg-info/top_level.txt\n'}
+[0.598357] (swarm) StdoutLine: {'line': b"writing manifest file 'build/swarm/swarm.egg-info/SOURCES.txt'\n"}
+[0.599559] (swarm) StdoutLine: {'line': b"reading manifest file 'build/swarm/swarm.egg-info/SOURCES.txt'\n"}
+[0.600062] (swarm) StdoutLine: {'line': b"writing manifest file 'build/swarm/swarm.egg-info/SOURCES.txt'\n"}
+[0.600173] (swarm) StdoutLine: {'line': b'running build\n'}
+[0.600228] (swarm) StdoutLine: {'line': b'running build_py\n'}
+[0.600295] (swarm) StdoutLine: {'line': b'creating /src/task3/swarm/build/swarm/build\n'}
+[0.600371] (swarm) StdoutLine: {'line': b'creating /src/task3/swarm/build/swarm/build/lib\n'}
+[0.600427] (swarm) StdoutLine: {'line': b'creating /src/task3/swarm/build/swarm/build/lib/swarm\n'}
+[0.600490] (swarm) StdoutLine: {'line': b'copying swarm/__init__.py -> /src/task3/swarm/build/swarm/build/lib/swarm\n'}
+[0.600541] (-) TimerEvent: {}
+[0.600669] (swarm) StdoutLine: {'line': b'copying swarm/shawarma.py -> /src/task3/swarm/build/swarm/build/lib/swarm\n'}
+[0.600728] (swarm) StdoutLine: {'line': b'running install\n'}
+[0.600885] (swarm) StdoutLine: {'line': b'running install_lib\n'}
+[0.601435] (swarm) StdoutLine: {'line': b'creating /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm\n'}
+[0.601518] (swarm) StdoutLine: {'line': b'copying /src/task3/swarm/build/swarm/build/lib/swarm/__init__.py -> /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm\n'}
+[0.601780] (swarm) StdoutLine: {'line': b'copying /src/task3/swarm/build/swarm/build/lib/swarm/shawarma.py -> /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm\n'}
+[0.602172] (swarm) StdoutLine: {'line': b'byte-compiling /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm/__init__.py to __init__.cpython-310.pyc\n'}
+[0.602314] (swarm) StdoutLine: {'line': b'byte-compiling /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm/shawarma.py to shawarma.cpython-310.pyc\n'}
+[0.603251] (swarm) StdoutLine: {'line': b'running install_data\n'}
+[0.603592] (swarm) StdoutLine: {'line': b'creating /src/task3/swarm/install/swarm/share/ament_index\n'}
+[0.603671] (swarm) StdoutLine: {'line': b'creating /src/task3/swarm/install/swarm/share/ament_index/resource_index\n'}
+[0.603725] (swarm) StdoutLine: {'line': b'creating /src/task3/swarm/install/swarm/share/ament_index/resource_index/packages\n'}
+[0.603862] (swarm) StdoutLine: {'line': b'copying resource/swarm -> /src/task3/swarm/install/swarm/share/ament_index/resource_index/packages\n'}
+[0.603967] (swarm) StdoutLine: {'line': b'copying package.xml -> /src/task3/swarm/install/swarm/share/swarm\n'}
+[0.604024] (swarm) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.605811] (swarm) StdoutLine: {'line': b'Copying build/swarm/swarm.egg-info to /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm-0.0.0-py3.10.egg-info\n'}
+[0.606547] (swarm) StdoutLine: {'line': b'running install_scripts\n'}
+[0.625821] (swarm) StdoutLine: {'line': b'Installing swarm_cunt script to /src/task3/swarm/install/swarm/lib/swarm\n'}
+[0.626071] (swarm) StdoutLine: {'line': b"writing list of installed files to '/src/task3/swarm/build/swarm/install.log'\n"}
+[0.650278] (swarm) CommandEnded: {'returncode': 0}
+[0.658925] (swarm) JobEnded: {'identifier': 'swarm', 'rc': 0}
+[0.659426] (-) EventReactorShutdown: {}

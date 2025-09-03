@@ -1,0 +1,35 @@
+running egg_info
+creating build/swarm/swarm.egg-info
+writing build/swarm/swarm.egg-info/PKG-INFO
+writing dependency_links to build/swarm/swarm.egg-info/dependency_links.txt
+writing entry points to build/swarm/swarm.egg-info/entry_points.txt
+writing requirements to build/swarm/swarm.egg-info/requires.txt
+writing top-level names to build/swarm/swarm.egg-info/top_level.txt
+writing manifest file 'build/swarm/swarm.egg-info/SOURCES.txt'
+reading manifest file 'build/swarm/swarm.egg-info/SOURCES.txt'
+writing manifest file 'build/swarm/swarm.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /src/task3/swarm/build/swarm/build
+creating /src/task3/swarm/build/swarm/build/lib
+creating /src/task3/swarm/build/swarm/build/lib/swarm
+copying swarm/__init__.py -> /src/task3/swarm/build/swarm/build/lib/swarm
+copying swarm/shawarma.py -> /src/task3/swarm/build/swarm/build/lib/swarm
+running install
+running install_lib
+creating /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm
+copying /src/task3/swarm/build/swarm/build/lib/swarm/__init__.py -> /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm
+copying /src/task3/swarm/build/swarm/build/lib/swarm/shawarma.py -> /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm
+byte-compiling /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm/__init__.py to __init__.cpython-310.pyc
+byte-compiling /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm/shawarma.py to shawarma.cpython-310.pyc
+running install_data
+creating /src/task3/swarm/install/swarm/share/ament_index
+creating /src/task3/swarm/install/swarm/share/ament_index/resource_index
+creating /src/task3/swarm/install/swarm/share/ament_index/resource_index/packages
+copying resource/swarm -> /src/task3/swarm/install/swarm/share/ament_index/resource_index/packages
+copying package.xml -> /src/task3/swarm/install/swarm/share/swarm
+running install_egg_info
+Copying build/swarm/swarm.egg-info to /src/task3/swarm/install/swarm/lib/python3.10/site-packages/swarm-0.0.0-py3.10.egg-info
+running install_scripts
+Installing swarm_cunt script to /src/task3/swarm/install/swarm/lib/swarm
+writing list of installed files to '/src/task3/swarm/build/swarm/install.log'
