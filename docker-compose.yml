@@ -12,7 +12,7 @@ services:
     depends_on:
       - novnc
     volumes:
-      - ./src:/src/
+      - /home/yashb/Documents/inductions/2025-sem1-cni-inductions-arc:/root/workspace
 
   novnc:  
     image: theasp/novnc:latest
