@@ -185,7 +185,7 @@ def main(args=None):
         executor.add_node(node)
 
     try:
-        executor.spin()     # # keep running until interrupted
+        executor.spin()     # keep running until interrupted
     except KeyboardInterrupt:
     
         pass
@@ -199,3 +199,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
