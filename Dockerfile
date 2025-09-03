@@ -5,7 +5,6 @@ RUN apt-get update && apt-get install -y \
     ros-humble-turtlesim \
     ros-humble-teleop-twist-keyboard \
     ros-humble-rviz2 \
-    ros-humble-gazebo-ros \
     ros-humble-rqt \
     ros-humble-rqt-gui \
     ros-humble-rqt-common-plugins \

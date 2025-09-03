@@ -40,6 +40,10 @@ As always, best of luck and happy coding!
 
 4. Place your deliverables (screenshots, code, etc.) in this folder.
 
+4.1 Run `git commit -m "message"` to commit your changes.
+
+4.2 Run `git push` to push your changes to GitHub.
+
 5. **Submit a Pull Request (PR) to the main repository**.
 
    * **PR Title format:**
@@ -157,7 +161,7 @@ docker compose exec ros2 /bin/bash
 Then run:
 
 ```bash
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
+ros2 run turtlesim turtle_teleop_key
 ```
 
 You can now move the turtle with your keyboard.
