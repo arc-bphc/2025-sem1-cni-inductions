@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-turtlesim \
     ros-humble-teleop-twist-keyboard \
     ros-humble-rviz2 \
-    ros-humble-gazebo-ros \
+    # ros-humble-gazebo-ros-pkgs \
     && rm -rf /var/lib/apt/lists/*
 
 # Source ROS env automatically
