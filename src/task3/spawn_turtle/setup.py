@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'turtle_draw'
+package_name = 'spawn_turtle'
 
 setup(
     name=package_name,
@@ -19,8 +19,7 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [
-            'line = turtle_draw.line:main'
+        'console_scripts': [ 'swarm = spawn_turtle.swarm:main'
         ],
     },
 )
