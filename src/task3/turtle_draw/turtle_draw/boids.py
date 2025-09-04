@@ -27,7 +27,6 @@ class Mightynode(Node):
         req.theta = random.uniform(0.0, 2*math.pi)
         req.name = name
         future = self.client.call_async(req)
-        # self.turtle_angs.append(req.theta)
 
         rclpy.spin_until_future_complete(self, future)
 
@@ -42,7 +41,6 @@ class Mightynode(Node):
         msg.angular.z = 0.0
         pub.publish(msg)
         self.get_logger().info(f"Moving with speed {msg.linear.x:.2f}")
-        # self.turtle_speeds.append(msg.linear.x)
         for _,pose in self.turtle_poses.items():
             speed = msg.linear.x
             theta = pose.theta   
@@ -52,7 +50,8 @@ class Mightynode(Node):
     def update_velocity(self,steer,steer_angle,pub):
         k=2
         msg = Twist()
-        msg.linear.x = np.linalg.norm(steer+3) 
+        base_velocity = 3
+        msg.linear.x = np.linalg.norm(steer+base_velocity) 
         msg.angular.z = k * steer_angle
         pub.publish(msg)
 
@@ -79,12 +78,6 @@ class Mightynode(Node):
         for i,pub in enumerate(self.turtle_publishers):
             self.update_velocity(*self.Alignment(self.v_comps[i],dup[i]),pub)
 
-
-        # self.turtle_speeds.clear()
-        # self.turtle_angs.clear()
-        # self.v_comps.clear()
-
-
     def pose_callback(self,turtle_name,msg):
         self.turtle_poses[turtle_name] = msg
         
@@ -94,17 +87,14 @@ def main(args=None):
     node = Mightynode()
 
     for i in range(5):
-        # Creating Publisher channels for each turtle
         name = f'turtle{i+2}'
         names.append(name)
         pub_name = node.create_publisher(Twist, f'{name}/cmd_vel', 10)
         node.turtle_publishers.append(pub_name)
-        node.move_turtles(node.turtle_publishers[i])
-        
-        #Subscription for Pose messages - i finally understood subscriptionss
+        node.move_turtles(node.turtle_publishers[i])  
+
         node.create_subscription(Pose,f'{name}/pose',lambda msg, n=name: node.pose_callback(n, msg),10)
         node.spawn(name)
-        # node.v_comps.append()
     node.timer = node.create_timer(0.1, node.timer_callback)
     rclpy.spin(node)   
     node.destroy_node()             

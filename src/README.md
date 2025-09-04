@@ -1,0 +1,3 @@
+Well - Alignment is added, I could have added Cohesion and Seperation with more time..
+
+One thing to note that - i added a base velocity of 3 as difference between average velocity and turtle's velocity was less.. Also the middle turtle doesnt move - yeah i gotta remove that or let that interact but theres only 9 minutes to 11:59 so can't do it. Overall I learnt a lot - Subscription took time to understand but I think i understand how most of the things work. This was a great project, thank you.
