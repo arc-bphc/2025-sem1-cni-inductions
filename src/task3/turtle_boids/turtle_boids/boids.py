@@ -46,8 +46,8 @@ class BoidsSwarm(Node):
 
         # Create publishers & subscribers for each boid
         for name in self.names:
-            cmd_topic = f'/{name}/cmd_vel'
-            pose_topic = f'/{name}/pose'
+            cmd_topic = f'{name}/cmd_vel'
+            pose_topic = f'{name}/pose'
             self.pubs[name] = self.create_publisher(Twist, cmd_topic, 10)
             # subscriber with partial to store pose in dict
             self.create_subscription(Pose, pose_topic, partial(self._pose_cb, name), 10)
@@ -193,7 +193,8 @@ def main(args=None):
     except KeyboardInterrupt:
         pass
     node.destroy_node()
-    rclpy.shutdown()
+    if rclpy.ok():
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':
