@@ -25,35 +25,30 @@ This grants Docker containers permission to render GUI windows via XQuartz.
 ### 3. Create a Custom Dockerfile ###
 
 Instead of the repo’s docker-compose.yml, use this Dockerfile to ensure compatibility:
-
-`FROM ros:humble`
-
-`# Install prerequisites`
-`RUN apt-get update && apt-get install -y \`
-    `wget \`
-    `lsb-release \`
-    `gnupg2 \`
-    `curl \`
-    `&& rm -rf /var/lib/apt/lists/*`
-
-`# Add Ignition (Gazebo) Fortress repository`
-`RUN wget https://packages.osrfoundation.org/gazebo.key -O - | apt-key add - && \
-    `sh -c "echo 'deb http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main' > /etc/apt/sources.list.d/gazebo-stable.list" `
-
-`# Install Ignition Gazebo Fortress and ROS GUI packages`
-`RUN apt-get update && apt-get install -y \`
-    `ignition-fortress \`
-    `ros-humble-turtlesim \`
-    `ros-humble-teleop-twist-keyboard \`
-    `ros-humble-rviz2 \`
-    `&& rm -rf /var/lib/apt/lists/*`
-
-`# Set up ROS environment`
-`SHELL ["/bin/bash", "-c"]`
-`RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc`
-
-`CMD ["bash"]`
-
+```
+FROM ros:humble
+# Install prerequisites
+RUN apt-get update && apt-get install -y \
+    wget \
+    lsb-release \
+    gnupg2 \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+# Add Ignition (Gazebo) Fortress repository
+RUN wget https://packages.osrfoundation.org/gazebo.key -O - | apt-key add - && \
+    sh -c "echo 'deb http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main' > /etc/apt/sources.list.d/gazebo-stable.list"
+# Install Ignition Gazebo Fortress and ROS GUI packages
+RUN apt-get update && apt-get install -y \
+    ignition-fortress \
+    ros-humble-turtlesim \
+    ros-humble-teleop-twist-keyboard \
+    ros-humble-rviz2 \
+    && rm -rf /var/lib/apt/lists/*
+# Set up ROS environment
+SHELL ["/bin/bash", "-c"]
+RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+CMD ["bash"]
+```
 This includes:
 - ROS 2 Humble base
 - turtlesim & teleop_twist_keyboard
@@ -69,15 +64,17 @@ From your repo folder:
 
 Start the container with GUI support:
 
-`docker run -it \`
-    `--net=host \`
-    `-e DISPLAY=host.docker.internal:0 \`
-    `ros2-humble-gazebo`
+```
+docker run -it \
+    --net=host \
+    -e DISPLAY=host.docker.internal:0 \
+    ros2-humble-gazebo`
 
 
-`--net=host: lets container apps use host networking`
+--net=host: lets container apps use host networking
 
-`-e DISPLAY=host.docker.internal:0: routes GUI rendering via XQuartz`
+-e DISPLAY=host.docker.internal:0: routes GUI rendering via XQuartz
+```
 
 ### 6. Launch Turtlesim ###
 
