@@ -1,0 +1,24 @@
+{
+        "name": "ROS 2 Humble Development",
+        "build": {
+            "dockerfile": "../Dockerfile"
+        },
+        "workspaceFolder": "/Downloads/2025-sem1-cni-inductions/src/task2",
+        "mounts": [
+            "source=${localWorkspaceFolder},target=/Downloads/2025-sem1-cni-inductions/src/task2,type=bind"
+        ],
+        "customizations": {
+            "vscode": {
+                "extensions": [
+                    "ms-vscode.cpptools",
+                    "ms-python.python",
+                    "ms-iot.vscode-ros"
+]
+            }
+        },
+        "remoteUser": "root", // Or a non-root user if configured in Dockerfile
+        "runArgs": [		
+            "--net=host" // For network access to other ROS 2 nodes on host
+        ]
+    }
+
