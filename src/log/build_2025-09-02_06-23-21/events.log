@@ -1,0 +1,66 @@
+[0.000000] (-) TimerEvent: {}
+[0.000205] (turtle_draw) JobQueued: {'identifier': 'turtle_draw', 'dependencies': OrderedDict()}
+[0.000656] (turtle_swarm) JobQueued: {'identifier': 'turtle_swarm', 'dependencies': OrderedDict()}
+[0.000698] (turtle_draw) JobStarted: {'identifier': 'turtle_draw'}
+[0.011700] (turtle_swarm) JobStarted: {'identifier': 'turtle_swarm'}
+[0.099766] (-) TimerEvent: {}
+[0.200133] (-) TimerEvent: {}
+[0.300689] (-) TimerEvent: {}
+[0.400992] (-) TimerEvent: {}
+[0.501320] (-) TimerEvent: {}
+[0.601588] (-) TimerEvent: {}
+[0.701891] (-) TimerEvent: {}
+[0.802235] (-) TimerEvent: {}
+[0.902551] (-) TimerEvent: {}
+[1.002928] (-) TimerEvent: {}
+[1.030912] (turtle_draw) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/turtle_draw', 'build', '--build-base', '/src/build/turtle_draw/build', 'install', '--record', '/src/build/turtle_draw/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/src/task2/turtle_draw', 'env': {'HOSTNAME': 'cce98e5bb615', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/src/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': 'novnc:0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/src/install/turtle_swarm:/src/install/turtle_draw:/opt/ros/humble', 'PWD': '/src/build/turtle_draw', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/src/build/turtle_draw/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_draw/lib/python3.10/site-packages:/src/install/turtle_swarm/lib/python3.10/site-packages:/src/install/turtle_draw/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.038982] (turtle_swarm) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/turtle_swarm', 'build', '--build-base', '/src/build/turtle_swarm/build', 'install', '--record', '/src/build/turtle_swarm/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/src/task3/turtle_swarm', 'env': {'HOSTNAME': 'cce98e5bb615', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/src/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': 'novnc:0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/src/install/turtle_swarm:/src/install/turtle_draw:/opt/ros/humble', 'PWD': '/src/build/turtle_swarm', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/src/build/turtle_swarm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_swarm/lib/python3.10/site-packages:/src/install/turtle_swarm/lib/python3.10/site-packages:/src/install/turtle_draw/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.103054] (-) TimerEvent: {}
+[1.203363] (-) TimerEvent: {}
+[1.288945] (turtle_draw) StdoutLine: {'line': b'running egg_info\n'}
+[1.289695] (turtle_draw) StdoutLine: {'line': b'writing ../../build/turtle_draw/turtle_draw.egg-info/PKG-INFO\n'}
+[1.289955] (turtle_draw) StdoutLine: {'line': b'writing dependency_links to ../../build/turtle_draw/turtle_draw.egg-info/dependency_links.txt\n'}
+[1.290126] (turtle_draw) StdoutLine: {'line': b'writing entry points to ../../build/turtle_draw/turtle_draw.egg-info/entry_points.txt\n'}
+[1.290301] (turtle_draw) StdoutLine: {'line': b'writing requirements to ../../build/turtle_draw/turtle_draw.egg-info/requires.txt\n'}
+[1.290421] (turtle_draw) StdoutLine: {'line': b'writing top-level names to ../../build/turtle_draw/turtle_draw.egg-info/top_level.txt\n'}
+[1.292084] (turtle_draw) StdoutLine: {'line': b"reading manifest file '../../build/turtle_draw/turtle_draw.egg-info/SOURCES.txt'\n"}
+[1.293053] (turtle_draw) StdoutLine: {'line': b"writing manifest file '../../build/turtle_draw/turtle_draw.egg-info/SOURCES.txt'\n"}
+[1.293193] (turtle_draw) StdoutLine: {'line': b'running build\n'}
+[1.293275] (turtle_draw) StdoutLine: {'line': b'running build_py\n'}
+[1.293474] (turtle_swarm) StdoutLine: {'line': b'running egg_info\n'}
+[1.293751] (turtle_draw) StdoutLine: {'line': b'running install\n'}
+[1.294068] (turtle_draw) StdoutLine: {'line': b'running install_lib\n'}
+[1.294325] (turtle_swarm) StdoutLine: {'line': b'writing ../../build/turtle_swarm/turtle_swarm.egg-info/PKG-INFO\n'}
+[1.294570] (turtle_swarm) StdoutLine: {'line': b'writing dependency_links to ../../build/turtle_swarm/turtle_swarm.egg-info/dependency_links.txt\n'}
+[1.294827] (turtle_swarm) StdoutLine: {'line': b'writing entry points to ../../build/turtle_swarm/turtle_swarm.egg-info/entry_points.txt\n'}
+[1.294955] (turtle_swarm) StdoutLine: {'line': b'writing requirements to ../../build/turtle_swarm/turtle_swarm.egg-info/requires.txt\n'}
+[1.295078] (turtle_swarm) StdoutLine: {'line': b'writing top-level names to ../../build/turtle_swarm/turtle_swarm.egg-info/top_level.txt\n'}
+[1.295451] (turtle_draw) StdoutLine: {'line': b'running install_data\n'}
+[1.295600] (turtle_draw) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.296710] (turtle_swarm) StdoutLine: {'line': b"reading manifest file '../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt'\n"}
+[1.297704] (turtle_draw) StdoutLine: {'line': b"removing '/src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.297830] (turtle_swarm) StdoutLine: {'line': b"writing manifest file '../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt'\n"}
+[1.297944] (turtle_swarm) StdoutLine: {'line': b'running build\n'}
+[1.298047] (turtle_swarm) StdoutLine: {'line': b'running build_py\n'}
+[1.298131] (turtle_draw) StdoutLine: {'line': b'Copying ../../build/turtle_draw/turtle_draw.egg-info to /src/install/turtle_draw/lib/python3.10/site-packages/turtle_draw-0.0.0-py3.10.egg-info\n'}
+[1.298243] (turtle_swarm) StdoutLine: {'line': b'copying turtle_swarm/swarm.py -> /src/build/turtle_swarm/build/lib/turtle_swarm\n'}
+[1.298352] (turtle_swarm) StdoutLine: {'line': b'running install\n'}
+[1.298721] (turtle_swarm) StdoutLine: {'line': b'running install_lib\n'}
+[1.299022] (turtle_draw) StdoutLine: {'line': b'running install_scripts\n'}
+[1.299505] (turtle_swarm) StdoutLine: {'line': b'copying /src/build/turtle_swarm/build/lib/turtle_swarm/swarm.py -> /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm\n'}
+[1.300373] (turtle_swarm) StdoutLine: {'line': b'byte-compiling /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm/swarm.py to swarm.cpython-310.pyc\n'}
+[1.302451] (turtle_swarm) StdoutLine: {'line': b'running install_data\n'}
+[1.302721] (turtle_swarm) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.303429] (-) TimerEvent: {}
+[1.304872] (turtle_swarm) StdoutLine: {'line': b"removing '/src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.305202] (turtle_swarm) StdoutLine: {'line': b'Copying ../../build/turtle_swarm/turtle_swarm.egg-info to /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm-0.0.0-py3.10.egg-info\n'}
+[1.306253] (turtle_swarm) StdoutLine: {'line': b'running install_scripts\n'}
+[1.325838] (turtle_draw) StdoutLine: {'line': b'Installing circle_drawer script to /src/install/turtle_draw/lib/turtle_draw\n'}
+[1.326229] (turtle_draw) StdoutLine: {'line': b"writing list of installed files to '/src/build/turtle_draw/install.log'\n"}
+[1.333186] (turtle_swarm) StdoutLine: {'line': b'Installing swarm_node script to /src/install/turtle_swarm/lib/turtle_swarm\n'}
+[1.333572] (turtle_swarm) StdoutLine: {'line': b"writing list of installed files to '/src/build/turtle_swarm/install.log'\n"}
+[1.355659] (turtle_draw) CommandEnded: {'returncode': 0}
+[1.372251] (turtle_draw) JobEnded: {'identifier': 'turtle_draw', 'rc': 0}
+[1.374023] (turtle_swarm) CommandEnded: {'returncode': 0}
+[1.382043] (turtle_swarm) JobEnded: {'identifier': 'turtle_swarm', 'rc': 0}
+[1.382831] (-) EventReactorShutdown: {}

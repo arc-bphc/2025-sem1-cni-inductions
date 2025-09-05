@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/turtle_draw/turtle_draw.egg-info/PKG-INFO
+../../build/turtle_draw/turtle_draw.egg-info/SOURCES.txt
+../../build/turtle_draw/turtle_draw.egg-info/dependency_links.txt
+../../build/turtle_draw/turtle_draw.egg-info/entry_points.txt
+../../build/turtle_draw/turtle_draw.egg-info/requires.txt
+../../build/turtle_draw/turtle_draw.egg-info/top_level.txt
+../../build/turtle_draw/turtle_draw.egg-info/zip-safe
+resource/turtle_draw
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+turtle_draw/__init__.py
+turtle_draw/circle_drawer.py

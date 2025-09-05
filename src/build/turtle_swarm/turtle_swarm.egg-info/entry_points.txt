@@ -1,0 +1,3 @@
+[console_scripts]
+swarm_node = turtle_swarm.swarm:main
+

@@ -1,0 +1,214 @@
+[0.158s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.158s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f2499035f90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f2499035900>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f2499035900>>, mixin_verb=('build',))
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.315s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.316s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.316s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.317s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/src'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extensions ['colcon_pkg']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'colcon_pkg'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extensions ['colcon_meta']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'colcon_meta'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extensions ['ros']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'ros'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extensions ['cmake', 'python']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'cmake'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'python'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extensions ['python_setup_py']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(Task1) by extension 'python_setup_py'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'ignore_ament_install'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['colcon_pkg']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'colcon_pkg'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['colcon_meta']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'colcon_meta'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['ros']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'ros'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['cmake', 'python']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'cmake'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'python'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['python_setup_py']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'python_setup_py'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/build) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/build) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/build) ignored
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/install) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/install) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/install) ignored
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/log) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(task2/log) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/log) ignored
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extension 'ignore_ament_install'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extensions ['colcon_meta']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(task2/turtle_draw) by extension 'ros'
+[0.340s] DEBUG:colcon.colcon_core.package_identification:Package 'task2/turtle_draw' with type 'ros.ament_python' and name 'turtle_draw'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'ignore_ament_install'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extensions ['ros']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'ros'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extensions ['cmake', 'python']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'cmake'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'python'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extensions ['python_setup_py']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3) by extension 'python_setup_py'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extension 'ignore_ament_install'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extensions ['colcon_pkg']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(task3/turtle_swarm) by extension 'ros'
+[0.343s] DEBUG:colcon.colcon_core.package_identification:Package 'task3/turtle_swarm' with type 'ros.ament_python' and name 'turtle_swarm'
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_draw' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'turtle_draw' with the following arguments: {'ament_cmake_args': None, 'build_base': '/src/build/turtle_draw', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/src/install/turtle_draw', 'merge_install': False, 'path': '/src/task2/turtle_draw', 'symlink_install': False, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'turtle_swarm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'turtle_swarm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/src/build/turtle_swarm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/src/install/turtle_swarm', 'merge_install': False, 'path': '/src/task3/turtle_swarm', 'symlink_install': False, 'test_result_base': None}
+[0.372s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.373s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.374s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/src/task2/turtle_draw' with build type 'ament_python'
+[0.374s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_draw', 'ament_prefix_path')
+[0.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_draw/share/turtle_draw/hook/ament_prefix_path.ps1'
+[0.378s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/src/install/turtle_draw/share/turtle_draw/hook/ament_prefix_path.dsv'
+[0.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_draw/share/turtle_draw/hook/ament_prefix_path.sh'
+[0.379s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.379s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.384s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/src/task3/turtle_swarm' with build type 'ament_python'
+[0.384s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_swarm', 'ament_prefix_path')
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_swarm/share/turtle_swarm/hook/ament_prefix_path.ps1'
+[0.385s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/src/install/turtle_swarm/share/turtle_swarm/hook/ament_prefix_path.dsv'
+[0.386s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_swarm/share/turtle_swarm/hook/ament_prefix_path.sh'
+[0.386s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.386s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.670s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/src/task2/turtle_draw'
+[0.670s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.670s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.952s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/src/task3/turtle_swarm'
+[0.953s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.953s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.406s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/src/task2/turtle_draw': PYTHONPATH=/src/build/turtle_draw/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_draw/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_draw build --build-base /src/build/turtle_draw/build install --record /src/build/turtle_draw/install.log --single-version-externally-managed install_data
+[1.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/src/task3/turtle_swarm': PYTHONPATH=/src/build/turtle_swarm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_swarm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_swarm build --build-base /src/build/turtle_swarm/build install --record /src/build/turtle_swarm/install.log --single-version-externally-managed install_data
+[1.729s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/src/task2/turtle_draw' returned '0': PYTHONPATH=/src/build/turtle_draw/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_draw/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_draw build --build-base /src/build/turtle_draw/build install --record /src/build/turtle_draw/install.log --single-version-externally-managed install_data
+[1.733s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_draw' for CMake module files
+[1.734s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_draw' for CMake config files
+[1.735s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_draw/lib'
+[1.735s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_draw/bin'
+[1.735s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_draw/lib/pkgconfig/turtle_draw.pc'
+[1.735s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_draw/lib/python3.10/site-packages'
+[1.735s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_draw', 'pythonpath')
+[1.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_draw/share/turtle_draw/hook/pythonpath.ps1'
+[1.737s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/src/install/turtle_draw/share/turtle_draw/hook/pythonpath.dsv'
+[1.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_draw/share/turtle_draw/hook/pythonpath.sh'
+[1.738s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_draw/bin'
+[1.738s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtle_draw)
+[1.739s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_draw/share/turtle_draw/package.ps1'
+[1.740s] INFO:colcon.colcon_core.shell:Creating package descriptor '/src/install/turtle_draw/share/turtle_draw/package.dsv'
+[1.741s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_draw/share/turtle_draw/package.sh'
+[1.742s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_draw/share/turtle_draw/package.bash'
+[1.744s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_draw/share/turtle_draw/package.zsh'
+[1.745s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/src/install/turtle_draw/share/colcon-core/packages/turtle_draw)
+[1.746s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_swarm' for CMake module files
+[1.747s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_swarm' for CMake config files
+[1.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/src/task3/turtle_swarm' returned '0': PYTHONPATH=/src/build/turtle_swarm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/src/install/turtle_swarm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_swarm build --build-base /src/build/turtle_swarm/build install --record /src/build/turtle_swarm/install.log --single-version-externally-managed install_data
+[1.748s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_swarm/lib'
+[1.748s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_swarm/bin'
+[1.748s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_swarm/lib/pkgconfig/turtle_swarm.pc'
+[1.749s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_swarm/lib/python3.10/site-packages'
+[1.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_swarm', 'pythonpath')
+[1.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_swarm/share/turtle_swarm/hook/pythonpath.ps1'
+[1.750s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/src/install/turtle_swarm/share/turtle_swarm/hook/pythonpath.dsv'
+[1.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/src/install/turtle_swarm/share/turtle_swarm/hook/pythonpath.sh'
+[1.751s] Level 1:colcon.colcon_core.environment:checking '/src/install/turtle_swarm/bin'
+[1.751s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtle_swarm)
+[1.752s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_swarm/share/turtle_swarm/package.ps1'
+[1.752s] INFO:colcon.colcon_core.shell:Creating package descriptor '/src/install/turtle_swarm/share/turtle_swarm/package.dsv'
+[1.753s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_swarm/share/turtle_swarm/package.sh'
+[1.754s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_swarm/share/turtle_swarm/package.bash'
+[1.754s] INFO:colcon.colcon_core.shell:Creating package script '/src/install/turtle_swarm/share/turtle_swarm/package.zsh'
+[1.755s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/src/install/turtle_swarm/share/colcon-core/packages/turtle_swarm)
+[1.755s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.755s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.755s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.755s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.762s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.763s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.763s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.763s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.765s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[1.765s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.766s] INFO:colcon.colcon_core.shell:Creating prefix script '/src/install/local_setup.ps1'
+[1.768s] INFO:colcon.colcon_core.shell:Creating prefix util module '/src/install/_local_setup_util_ps1.py'
+[1.770s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/src/install/setup.ps1'
+[1.771s] INFO:colcon.colcon_core.shell:Creating prefix script '/src/install/local_setup.sh'
+[1.772s] INFO:colcon.colcon_core.shell:Creating prefix util module '/src/install/_local_setup_util_sh.py'
+[1.773s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/src/install/setup.sh'
+[1.775s] INFO:colcon.colcon_core.shell:Creating prefix script '/src/install/local_setup.bash'
+[1.776s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/src/install/setup.bash'
+[1.777s] INFO:colcon.colcon_core.shell:Creating prefix script '/src/install/local_setup.zsh'
+[1.778s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/src/install/setup.zsh'

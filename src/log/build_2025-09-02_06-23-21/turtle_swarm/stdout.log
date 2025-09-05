@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/turtle_swarm/turtle_swarm.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtle_swarm/turtle_swarm.egg-info/dependency_links.txt
+writing entry points to ../../build/turtle_swarm/turtle_swarm.egg-info/entry_points.txt
+writing requirements to ../../build/turtle_swarm/turtle_swarm.egg-info/requires.txt
+writing top-level names to ../../build/turtle_swarm/turtle_swarm.egg-info/top_level.txt
+reading manifest file '../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtle_swarm/turtle_swarm.egg-info/SOURCES.txt'
+running build
+running build_py
+copying turtle_swarm/swarm.py -> /src/build/turtle_swarm/build/lib/turtle_swarm
+running install
+running install_lib
+copying /src/build/turtle_swarm/build/lib/turtle_swarm/swarm.py -> /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm
+byte-compiling /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm/swarm.py to swarm.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/turtle_swarm/turtle_swarm.egg-info to /src/install/turtle_swarm/lib/python3.10/site-packages/turtle_swarm-0.0.0-py3.10.egg-info
+running install_scripts
+Installing swarm_node script to /src/install/turtle_swarm/lib/turtle_swarm
+writing list of installed files to '/src/build/turtle_swarm/install.log'
