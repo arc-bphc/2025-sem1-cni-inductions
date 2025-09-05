@@ -1,3 +1,0 @@
-[console_scripts]
-swarm_cunt = swarm.shawarma:main
-

@@ -1,3 +1,0 @@
-[console_scripts]
-circle_drawer = turtle_draw.circle_drawer:main
-
