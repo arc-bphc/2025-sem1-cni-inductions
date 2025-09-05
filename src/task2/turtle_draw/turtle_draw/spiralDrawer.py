@@ -18,7 +18,7 @@ class SpiralDrawer(Node):
         self.declare_parameter('angular_speed', 2.0)
         self.declare_parameter('radius_growth', 0.01)
         self.declare_parameter('base_linear_speed', 1.0)
-        self.declare_parameter('max_radius', 5.0)
+        self.declare_parameter('max_radius', 3.0)
         
         self.center_x = self.get_parameter('center_x').value
         self.center_y = self.get_parameter('center_y').value
