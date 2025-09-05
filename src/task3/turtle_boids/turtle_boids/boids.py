@@ -1,202 +1,156 @@
-#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from turtlesim.srv import Spawn
+from turtlesim.srv import Spawn, Kill
 from turtlesim.msg import Pose
 from geometry_msgs.msg import Twist
-import math
 import random
-from functools import partial
+import math
 
 
-class BoidsSwarm(Node):
-    def __init__(self, num_boids: int = 6):
-        super().__init__('boids_swarm')
+class BoidsNode(Node):
+    def __init__(self):
+        super().__init__('boids_node')
 
-        self.num_boids = max(5, int(num_boids))  # require at least 5
-        self.names = []         # actual names returned by spawn service
-        self.poses = {}         # map name -> latest Pose (turtlesim.msg.Pose)
-        self.pubs = {}          # map name -> cmd_vel publisher
+        #params
+        self.num_boids = 8
+        self.neighbor_dist = 7.0
+        self.max_linear = 2.0
+        self.max_angular = 3.0
+        self.sep_weight = 1.0
+        self.align_weight = 0.75
+        self.coh_weight = 3.0
+        self.bound_weight = 2.0
 
-        # Spawn service client
-        self.spawn_client = self.create_client(Spawn, '/spawn')
-        while not self.spawn_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Waiting for /spawn service...')
+        self.names = []
+        self.poses = {}
+        self.pubs = {}
 
-        # Spawn turtles at random positions (avoid walls)
+        #clear prev run
+        self.kill_client = self.create_client(Kill, 'kill')
+        for name in ['turtle1'] + [f'boid{i+1}' for i in range(50)]:
+            req = Kill.Request()
+            req.name = name
+            future = self.kill_client.call_async(req)
+            rclpy.spin_until_future_complete(self, future)
+
+        #spawn
+        self.spawn_client = self.create_client(Spawn, 'spawn')
         for i in range(self.num_boids):
             req = Spawn.Request()
             req.x = random.uniform(2.0, 9.0)
             req.y = random.uniform(2.0, 9.0)
             req.theta = random.uniform(-math.pi, math.pi)
-            # request a friendly name, but use the returned name to be safe
             req.name = f'boid{i+1}'
+
             future = self.spawn_client.call_async(req)
-            # wait for spawn to finish
-            while rclpy.ok() and not future.done():
-                rclpy.spin_once(self, timeout_sec=0.1)
+            rclpy.spin_until_future_complete(self, future)
             try:
                 resp = future.result()
                 name = resp.name
             except Exception as e:
-                self.get_logger().error(f'Error spawning boid {i+1}: {e}')
+                self.get_logger().error(f'Failed to spawn boid {i+1}: {e}')
                 name = req.name
-            self.get_logger().info(f'Spawned {name} at ({req.x:.2f}, {req.y:.2f})')
+
             self.names.append(name)
+            self.pubs[name] = self.create_publisher(Twist, f'{name}/cmd_vel', 10)
+            self.create_subscription(Pose, f'{name}/pose', self.make_pose_callback(name), 10)
 
-        # Create publishers & subscribers for each boid
+        self.timer = self.create_timer(0.1, self.update)
+
+    def make_pose_callback(self, name):
+        def callback(msg: Pose):
+            self.poses[name] = msg
+        return callback
+
+    def distance(self, p1, p2):
+        return math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)
+
+    def update(self):
+        if len(self.poses) < len(self.names):
+            return
+
         for name in self.names:
-            cmd_topic = f'{name}/cmd_vel'
-            pose_topic = f'{name}/pose'
-            self.pubs[name] = self.create_publisher(Twist, cmd_topic, 10)
-            # subscriber with partial to store pose in dict
-            self.create_subscription(Pose, pose_topic, partial(self._pose_cb, name), 10)
-            self.poses[name] = None
+            boid = self.poses[name]
 
-        # Boids parameters (tweak these to taste)
-        self.max_linear = 2.0
-        self.max_angular = 3.0
-        self.neighbor_dist = 2.0
-        self.sep_weight = 1.5
-        self.align_weight = 1.0
-        self.coh_weight = 1.0
-        self.boundary_weight = 4.0
-
-        # turtlesim area center & margins for boundary avoidance
-        self.center_x = 5.5
-        self.center_y = 5.5
-        self.margin = 1.0
-
-        # control loop timer
-        self.timer_period = 0.1  # seconds (10 Hz)
-        self.create_timer(self.timer_period, self._control_loop)
-
-        self.get_logger().info(f'BoidsSwarm started with {len(self.names)} boids.')
-
-    def _pose_cb(self, name: str, msg: Pose):
-        """Store latest pose for turtle `name`."""
-        self.poses[name] = msg
-
-    def _neighbors(self, name: str):
-        """Return list of (other_name, Pose, dist) within neighbor_dist."""
-        p = self.poses.get(name)
-        if p is None:
-            return []
-        neighbors = []
-        for other in self.names:
-            if other == name:
-                continue
-            op = self.poses.get(other)
-            if op is None:
-                continue
-            dx = op.x - p.x
-            dy = op.y - p.y
-            dist = math.hypot(dx, dy)
-            if dist <= self.neighbor_dist:
-                neighbors.append((other, op, dist))
-        return neighbors
-
-    @staticmethod
-    def _limit(val, low, high):
-        return max(low, min(high, val))
-
-    def _control_loop(self):
-        """Main control loop: compute boids steering and publish Twist for each turtle."""
-        for name in self.names:
-            pose = self.poses.get(name)
-            if pose is None:
-                # no pose yet; skip this boid
-                continue
-
-            xi, yi, thetai = pose.x, pose.y, pose.theta
-
-            neighbors = self._neighbors(name)
-
-            # initialize steering components
             sep_x = sep_y = 0.0
-            align_x = align_y = 0.0
+            ali_x = ali_y = 0.0
             coh_x = coh_y = 0.0
+            count = 0
 
-            if neighbors:
-                # Cohesion: move toward average neighbor position
-                avg_x = sum(p.x for (_, p, _) in neighbors) / len(neighbors)
-                avg_y = sum(p.y for (_, p, _) in neighbors) / len(neighbors)
-                coh_x = (avg_x - xi)
-                coh_y = (avg_y - yi)
+            for other_name, other in self.poses.items():
+                if name == other_name:
+                    continue
+                d = self.distance(boid, other)
+                if d < self.neighbor_dist and d > 0:
 
-                # Alignment: average heading vector of neighbors
-                avg_vx = sum(math.cos(p.theta) for (_, p, _) in neighbors) / len(neighbors)
-                avg_vy = sum(math.sin(p.theta) for (_, p, _) in neighbors) / len(neighbors)
-                align_x = avg_vx
-                align_y = avg_vy
+                    #separation
+                    if d < self.neighbor_dist * 0.5:
+                        sep_x += (boid.x - other.x) / (d**2)
+                        sep_y += (boid.y - other.y) / (d**2)
 
-                # Separation: away from close neighbors (stronger when very close)
-                for (_, p, dist) in neighbors:
-                    if dist > 1e-6:
-                        sep_x += (xi - p.x) / (dist * dist)
-                        sep_y += (yi - p.y) / (dist * dist)
+                    #alignment
+                    ali_x += math.cos(other.theta)
+                    ali_y += math.sin(other.theta)
 
-            # Boundary avoidance: steer away from walls / toward center when near edges
-            bx = by = 0.0
-            xmin, xmax, ymin, ymax = 0.5, 10.5, 0.5, 10.5
-            if xi < xmin + self.margin:
-                bx += (xmin + self.margin - xi)
-            elif xi > xmax - self.margin:
-                bx -= (xi - (xmax - self.margin))
-            if yi < ymin + self.margin:
-                by += (ymin + self.margin - yi)
-            elif yi > ymax - self.margin:
-                by -= (yi - (ymax - self.margin))
+                    #cohesion
+                    coh_x += other.x
+                    coh_y += other.y
+                    count += 1
 
-            # Combine steering with weights
+            if count > 0:
+                ali_x /= count
+                ali_y /= count
+                coh_x = (coh_x / count) - boid.x
+                coh_y = (coh_y / count) - boid.y
+
             steer_x = (self.sep_weight * sep_x +
-                       self.align_weight * align_x +
-                       self.coh_weight * coh_x +
-                       self.boundary_weight * bx)
+                       self.align_weight * ali_x +
+                       self.coh_weight * coh_x)
             steer_y = (self.sep_weight * sep_y +
-                       self.align_weight * align_y +
-                       self.coh_weight * coh_y +
-                       self.boundary_weight * by)
+                       self.align_weight * ali_y +
+                       self.coh_weight * coh_y)
 
-            # If steering is tiny (isolated), add a small random wander to keep motion
-            if abs(steer_x) < 1e-4 and abs(steer_y) < 1e-4:
-                steer_x = math.cos(thetai) * 0.1 + random.uniform(-0.1, 0.1)
-                steer_y = math.sin(thetai) * 0.1 + random.uniform(-0.1, 0.1)
+            #avoid map edge
+            margin = 1.0
+            xmin, xmax, ymin, ymax = 0.5, 10.5, 0.5, 10.5
+            bx = by = 0.0
+            if boid.x < xmin + margin:
+                bx += (xmin + margin - boid.x)
+            elif boid.x > xmax - margin:
+                bx -= (boid.x - (xmax - margin))
+            if boid.y < ymin + margin:
+                by += (ymin + margin - boid.y)
+            elif boid.y > ymax - margin:
+                by -= (boid.y - (ymax - margin))
 
-            desired_theta = math.atan2(steer_y, steer_x)
-            angle_diff = desired_theta - thetai
-            # normalize
-            angle_diff = math.atan2(math.sin(angle_diff), math.cos(angle_diff))
+            steer_x += 2.0 * bx
+            steer_y += 2.0 * by
 
-            steer_mag = math.hypot(steer_x, steer_y)
+            steer_x += random.uniform(-0.2, 0.2)
+            steer_y += random.uniform(-0.2, 0.2)
 
-            # Linear speed scales with how aligned we are (reduce speed if we need to turn) and steering strength
-            linear = self.max_linear * (1.0 - min(1.0, abs(angle_diff) / math.pi)) * min(1.0, steer_mag / 2.0)
-            linear = self._limit(linear, 0.02, self.max_linear)  # small min so they keep moving
+            angle = math.atan2(steer_y, steer_x)
+            speed = math.sqrt(steer_x ** 2 + steer_y ** 2)
 
-            # Angular velocity: simple P controller on angle error
-            angular = 2.0 * angle_diff
-            angular = self._limit(angular, -self.max_angular, self.max_angular)
-
-            # Publish Twist
-            msg = Twist()
-            msg.linear.x = float(linear)
-            msg.angular.z = float(angular)
-            self.pubs[name].publish(msg)
-
+            #publish
+            twist = Twist()
+            twist.linear.x = min(speed, self.max_linear)
+            diff = (angle - boid.theta + math.pi) % (2 * math.pi) - math.pi
+            twist.angular.z = max(-self.max_angular, min(self.max_angular, diff))
+            self.pubs[name].publish(twist)
 
 def main(args=None):
     rclpy.init(args=args)
-    node = BoidsSwarm(num_boids=6)  # change to spawn more/less boids (min 5)
+    node = BoidsNode()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
-    node.destroy_node()
-    if rclpy.ok():
-        rclpy.shutdown()
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':
     main()
-
