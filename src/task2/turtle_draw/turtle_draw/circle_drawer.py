@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+import rclpy    # Needed to create a ROS node
+import numpy as np
+
+from rclpy.node import Node
+from geometry_msgs.msg import Twist
+from std_msgs.msg import String
+from pynput import keyboard
+from turtlesim.msg import Pose
+
+
+class MoveCircleNode(Node):
+    def __init__(self):
+        super().__init__('circle_drawer')
+
+        self.cmd_vel_pub_ = self.create_publisher(Twist,"/turtle2/cmd_vel",40)
+        self.subscription = self.create_subscription(Pose,'/turtle2/pose',self.pose_callback,10)
+
+        self.timer = self.create_timer(1.0, self.send_velocity_command)
+        #self.send_velocity_command()
+        self.get_logger().info('Move circle node has been started')
+        self.counter=0
+        self.publisher_ = self.create_publisher(String, 'keypress_topic', 10)
+        self.listener = keyboard.Listener(
+                on_press=self.on_press,
+                on_release=self.on_release)
+        self.listener.start()
+
+       
+    def send_velocity_command(self):
+        msg=Twist()
+        msg.linear.x=np.pi
+        msg.linear.y=0.0
+        msg.linear.z=0.0
+        msg.angular.x=0.0
+        msg.angular.y=0.0
+        msg.angular.z=np.pi/2.0
+        self.cmd_vel_pub_.publish(msg)
+        self.counter+=1
+        #self.pose_callback()
+
+        if(self.counter>=4) :
+            self.timer.cancel()
+
+    def pose_callback(self, msg):
+        self.current_pose = msg
+        self.get_logger().info(f'Turtle position: x={msg.x:.2f}, y={msg.y:.2f}, theta={msg.theta:.2f}')
+
+    def on_press(self, key):
+        try:
+            key_char = key.char
+        except AttributeError:
+            key_char = str(key) # Handle special keys like 'space', 'esc', etc.
+
+        msg = String()
+        msg.data = f"Pressed: {key_char}"
+        self.publisher_.publish(msg)
+        if (key_char=='f'):
+            self.timer.reset()
+        self.get_logger().info(f'Publishing: "{msg.data}"')
+
+    def on_release(self, key):
+        # Optional: handle key release events
+        pass
+   
+def main(args=None):
+    rclpy.init(args=args)
+    node=MoveCircleNode()
+
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
